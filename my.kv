@@ -1,0 +1,655 @@
+#coding=utf-8
+
+<MyGrid>
+    but1: but1
+    but2: but2
+    but3: but3
+    but4: but4
+    but5: but5
+    but6: but6
+    but7: but7
+    but8: but8
+    but11: but11
+    but12: but12
+    but13: but13
+    but14: but14
+    but15: but15
+    but16: but16
+    but17: but17
+    but18: but18
+    font: font
+    spiq: spiq
+    spil: spil
+    spispd: spispd
+    spimode: spimode
+    gcheck: gcheck
+    dict: dict
+    ans1: ans1
+    ans2: ans2
+    inst: inst
+#    rev : rev
+    spi1: spi1
+    spi2: spi2
+    spi3: spi3
+    spi4: spi4
+    spi5: spi5
+    spi6: spi6
+    spi7: spi7
+    spi8: spi8
+    qverse: qverse
+    chapstart: chapstart
+    chapend: chapend
+    lookfor: lookfor
+
+    FloatLayout:
+        size: root.width-20, root.height-20
+        pos: 10,10
+        canvas:
+            Color:
+                rgba: 0.5, 0.5, 0.5, 0.9
+
+        Image:
+            color: 1,1,1,1
+            source: "cross.png"
+            pos_hint :{'center_x':0.5, 'center_y':0.5}
+            allow_stretch: True
+            keep_ratio: False
+#            size_hint: 1,1
+
+
+    GridLayout:
+
+        cols: 8
+        size: root.width-20, root.height-20
+        pos: 10,10
+
+        Spinner:
+            pos:
+            id : spi1
+            text: app.spi1
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','创世记', '出埃及记', '利未记', '民数记','申命记')
+
+        Spinner:
+            pos:
+            id : spi2
+            text: app.spi2
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','约书亚记','士师记','路得记','撒母耳记上', '撒母耳记下', '列王记上','列王记下','历代志上','历代志下','以斯拉记','尼希米记','以斯帖记')
+
+        Spinner:
+            pos:
+            id : spi3
+            text: app.spi3
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','约伯记','诗篇','箴言','传道书','雅歌')
+
+        Spinner:
+            pos:
+            id : spi4
+            text: app.spi4
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','以赛亚书','耶利米书','耶利米哀歌','以西结书','但以理书')
+        Spinner:
+            pos:
+            id : spi5
+            text: app.spi5
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','何西阿书','约珥书','阿摩司书','俄巴底亚书','约拿书','弥迦书','那鸿书','哈巴谷书','西番亚书','哈该书', '撒迦利亚书','玛拉基书')
+
+        Spinner:
+            pos:
+            id : spi6
+            text: app.spi6
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','马太福音','马可福音','路加福音','约翰福音','使徒行传')
+        Spinner:
+            pos:
+            id : spi7
+            text: app.spi7
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','罗马书','哥林多前书','哥林多后书','加拉太书','以弗所书','腓立比书','歌罗西书','帖撒罗尼迦前书', '帖撒罗尼迦后书','提摩太前书','提摩太后书','提多书','腓利门书')
+
+        Spinner:
+            pos:
+            id : spi8
+            text: app.spi8
+            font_name: 'DroidSansFallback.ttf'
+            font_size: 16
+            size_hint_y: 0.07
+            color: 1,1,1,1
+            background_color: 1, 1, 1, 0.3
+            outline_color: (0, 0, 1)
+            outline_width: 2.5
+            values: ('(不选)','(全选)','希伯来书','雅各书','彼得前书','彼得后书','约翰一书','约翰二书','约翰三书','犹大书','启示录')
+
+        Label:
+
+
+    GridLayout:
+        cols: 1
+        size: root.width-20, root.height-60
+        pos: 10, 10
+
+
+        Label:
+            id: qverse
+            text: app.qverse
+            size: self.texture_size
+            text_size: root.width-20, 800
+            pos: 250, 450
+            padding: 20,20
+            font_size: 24
+            font_name: 'DroidSansFallback.ttf'
+            valign: 'middle'
+            halign: 'center'
+            outline_color: (0.3, 0.1, 0.9)
+            outline_width: 2
+            strip_reflow: True
+            background_color: 0.0, 0.0, 0.0, 0.0
+            # on_press: root.voice()
+
+
+
+
+        Label:
+            id: inst
+            text: app.inst
+            size_hint: 0.1, 0.18
+            text_size: root.width, 30
+            padding: 1,1
+            outline_color: (0.0, 0.0, 0.9)
+            outline_width: 2
+            font_size: 20
+            font_name: 'DroidSansFallback.ttf'
+            valign: 'middle'
+            halign: 'center'
+            size: self.texture_size
+
+        GridLayout:
+            size_hint_y: 0.2
+            cols: 6
+
+
+            TextInput:
+                id: chapstart
+                text: app.chapstart
+                # pos_hint :{'center_x':0.5, 'center_y':0.5}
+                multiline: False
+                write_tab: False
+                font_name: 'DroidSansFallback.ttf'
+                valign: 'middle'
+                halign: 'center'
+                padding: 0,12,0,0
+                font_size: 24
+                size_hint_x: 0.04
+                color: 1,1,1,1
+                background_color: 0.0, 0.7, 0.7, 0.3
+                hint_text: "从几章"
+                strip_reflow: True
+
+            TextInput:
+                id: chapend
+                text: app.chapend
+                multiline: False
+                write_tab: False
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.2
+                valign: 'middle'
+                halign: 'center'
+                padding: 0,12,0,0
+                size_hint: 0.1, 0.29
+                font_size: 24
+                size_hint_x: 0.04
+                color: 1,1,1,1
+                background_color: 0.0, 0.7, 0.7, 0.3
+                hint_text: "到几章"
+
+
+            Button:
+                id: ans1
+                text: ""
+                background_color: 0.0, 1.0, 0.0, 0.4
+                outline_color: (0.5, 0.3, 0.2)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.25
+                size: 20, 400
+                padding: 200,200
+                on_press: root.ansc1()
+            Button:
+                id: ans2
+                text: ""
+                background_color: 0.0, 1.0, 0.0, 0.4
+                outline_color: (0.5, 0.3, 0.2)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.1, 0.25
+                size: 20, 400
+                padding: 200,200
+                on_press: root.ansc2()
+
+            Button:
+                text: "读出"
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size: 20, 400
+                size_hint_x: 0.04
+                padding: 200,200
+                color: 1,1,1,1
+                background_color: 0.0, 0.7, 0.7, 0.3
+                outline_color: (0.0, 0.2, 0.2)
+                outline_width: 2
+                on_press: root.voice()
+
+
+            TextInput:
+                id: lookfor
+                text: app.lookfor
+                multiline: False
+                write_tab: False
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.04
+                valign: 'middle'
+                halign: 'center'
+                padding: 0,12,0,0
+                font_size: 24
+                color: 1,1,1,1
+                background_color: 0.0, 0.7, 0.7, 0.3
+                hint_text: "指定字节"
+
+#                opacity: 0.1
+
+
+        GridLayout:
+            cols: 6
+
+
+            Label:
+                text: "出题:"
+                background_color: 0.0, 0.0, 0.0, 0.0
+                outline_color: (0, 0.1, 0.0)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+
+            Spinner:
+                pos:
+                id : spiq
+                text: app.spiq
+                font_name: 'DroidSansFallback.ttf'
+                font_size: 24
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1, 1, 1, 0.3
+                outline_color: (0.2, 0, 0.5)
+                outline_width: 2.5
+                values: ('随机','下一节')
+                size_hint_x: 0.48
+
+
+            Button:
+                id: but1
+                text: app.btn1
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn1()
+            Button:
+                id: but2
+                text: app.btn2
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn2()
+            Button:
+                id: but11
+                text: app.btn11
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn11()
+            Button:
+                id: but12
+                text: app.btn12
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn12()
+
+            Label:
+                text: "语言:"
+                background_color: 0.0, 0.0, 0.0, 0.0
+                outline_color: (0, 0.1, 0.0)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+
+            Spinner:
+                pos:
+                id : spil
+                text: app.spil
+                font_name: 'DroidSansFallback.ttf'
+                font_size: 24
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1, 1, 1, 0.3
+                outline_color: (0.2, 0, 0.5)
+                outline_width: 2.5
+                values: ("中文", "English")
+                size_hint_x: 0.48
+
+            Button:
+                id: but3
+                text: app.btn3
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn3()
+            Button:
+                id: but4
+                text: app.btn4
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn4()
+
+            Button:
+                id: but13
+                text: app.btn13
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn13()
+            Button:
+                id: but14
+                text: app.btn14
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn14()
+
+            Label:
+                text: "速度:"
+                background_color: 0.0, 0.0, 0.0, 0.0
+                outline_color: (0, 0.1, 0.0)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+
+            Spinner:
+                pos:
+                id : spispd
+                text: app.spispd
+                font_name: 'DroidSansFallback.ttf'
+                font_size: 24
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1, 1, 1, 0.3
+                outline_color: (0.2, 0, 0.5)
+                outline_width: 2.5
+                values: ("-5", "-4", "-3", "-2", "-1", "正常", "+1", "+2", "+3", "+4", "+5")
+                size_hint_x: 0.48
+
+            Button:
+                id: but5
+                text: app.btn5
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn5()
+            Button:
+                id: but6
+                text: app.btn6
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn6()
+            Button:
+                id: but15
+                text: app.btn15
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn15()
+            Button:
+                id: but16
+                text: app.btn16
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn16()
+
+            Label:
+                text: "模式:"
+                background_color: 0.0, 0.0, 0.0, 0.0
+                outline_color: (0, 0.1, 0.0)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+
+            Spinner:
+                pos:
+                id : spimode
+                text: app.spimode
+                font_name: 'DroidSansFallback.ttf'
+                font_size: 24
+                size_hint_y: 0.07
+                color: 1,1,1,1
+                background_color: 1, 1, 1, 0.3
+                outline_color: (0.2, 0, 0.5)
+                outline_width: 2.5
+                values: ("学习", "解题")
+                size_hint_x: 0.48
+
+            Button:
+                id: but7
+                text: app.btn7
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                on_press: root.btn7()
+            Button:
+                id: but8
+                text: app.btn8
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0.3, 0.2, 0.1)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn8()
+            Button:
+                id: but17
+                text: app.btn17
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn17()
+            Button:
+                id: but18
+                text: app.btn18
+                background_color: 0.0, 0.1, 0.5, 0.5
+                outline_color: (0, 0.5, 0.5)
+                outline_width: 2
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.35
+                on_press: root.btn18()
+
+
+        GridLayout:
+            cols: 7
+            # size: root.width-20, root.height-20
+            size_hint: 0.1, 0.25
+            # pos: 10,10
+
+            Label:
+                text: "字体:"
+                outline_width: 2
+                background_color: 0.0, 0.0, 0.0, 0.0
+                outline_color: (0, 0.1, 0.0)
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint_x: 0.087
+
+            Spinner:
+                id: font
+                text:app.font
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 1, 1, 1, 0.3
+                outline_color: (0.2, 0, 0.5)
+                outline_width: 2.5
+                size_hint_x: 0.12
+                on_kv_post: root.font_c()
+                # on_touch_up: root.font_c()
+                values: ("原设定", "+4", "+8", "+12", "+16", "+20", "+24", "+28", "+32")
+
+
+            Button:
+                id: restart
+                text:app.restart
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.3, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_release: root.restart()
+
+            Button:
+                id: rev
+                text:app.rev
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.3, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_press: root.rev()
+
+            Button:
+                id: submit
+                text:app.submit
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.3, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_press: root.submit()
+
+            Spinner:
+                id : dict
+                text: "英文词典"
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                font_size: 24
+                color: 1,1,1,1
+                background_color: 0.0, 0.1, 0.3, 0.5
+                outline_color: (0, 0, 1)
+                outline_width: 2.5
+                values: app.words_list
+                height: 10
+
+            Button:
+                id: gcheck
+                text:app.gcheck
+                font_size: 24
+                font_name: 'DroidSansFallback.ttf'
+                size_hint: 0.2, 0.3
+                background_color: 0.0, 0.1, 0.3, 0.5
+                outline_color: (0, 0.1, 0.8)
+                outline_width: 2
+                on_press: root.check()
+
+#            canvas.before:
+#                Rectangle
+#                    source: "cross.jpg"
+#                    size: self.texture_size
+
+
